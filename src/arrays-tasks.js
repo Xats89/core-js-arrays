@@ -20,8 +20,13 @@
  *    getIntervalArray(0, 100) => [ 0, 1, 2, ..., 100 ]
  *    getIntervalArray(3, 3) => [ 3 ]
  */
-function getIntervalArray(/* start, end */) {
-  throw new Error('Not implemented');
+function getIntervalArray(start, end) {
+  // throw new Error('Not implemented');
+  const len = end - start + 1;
+  const arr = Array(len)
+    .fill('')
+    .map((e, i) => i + start);
+  return arr;
 }
 
 /**
@@ -555,7 +560,6 @@ function shiftArray(arr, n) {
  *   sortDigitNamesByNumericOrder([ 'one','one','one','zero' ]) => [ 'zero','one','one','one' ]
  */
 function sortDigitNamesByNumericOrder(arr) {
-  // throw new Error('Not implemented');
   const numArr = [
     'zero',
     'one',
